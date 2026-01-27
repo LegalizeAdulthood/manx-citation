@@ -1,0 +1,20 @@
+{
+  "name": "manx-citation",
+  "version": "1.0.0",
+  "description": "Generate citation text from manx-docs.org URLs",
+  "main": "citation.js",
+  "scripts": {
+    "start": "node citation.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LegalizeAdulthood/manx-citation.git"
+  },
+  "author": "LegalizeAdulthood",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "moment": "^2.30.1",
+    "request": "^2.88.2"
+  }
+}
