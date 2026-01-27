@@ -1,7 +1,7 @@
-﻿var cheerio = require('cheerio');
+var axios = require('axios');
+var cheerio = require('cheerio');
 var http = require('http');
 var moment = require('moment');
-var request = require('request');
 var util = require('util');
 
 function starts_with(text, prefix) {
@@ -34,13 +34,12 @@ function citation_from_html(citation, callback) {
 }
 
 function citation_from_url(url, callback) {
-    request(url,
-        function(err, res, data) {
-            if (err) {
-                callback(err);
-            } else {
-                citation_from_html({ url: url, html: data }, callback)
-            }
+    axios.get(url)
+        .then(function(response) {
+            citation_from_html({ url: url, html: response.data }, callback);
+        })
+        .catch(function(err) {
+            callback(err);
         });
 }
 
