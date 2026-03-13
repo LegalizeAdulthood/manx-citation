@@ -1,0 +1,12 @@
+{
+    "manxcitation-desc": "Adds toolbar button to insert citations from Manx Documentation Database website",
+    "manxcitation-button-label": "Manx citation",
+    "manxcitation-button-tooltip": "Insert citation from Manx Documentation Database",
+    "manxcitation-prompt": "Enter Manx Documentation Database URL (e.g., https://manx-docs.org/details.php/12345,67890):",
+    "manxcitation-success": "Citation inserted successfully",
+    "manxcitation-error-invalid-url": "Invalid URL. Must be from manx-docs.org in format: http(s)://manx-docs.org/details.php/ID,ID",
+    "manxcitation-error-fetch": "Failed to fetch citation from URL",
+    "manxcitation-invalid-url": "Invalid URL provided. Must be from manx-docs.org",
+    "manxcitation-fetch-error": "Failed to fetch content from the provided URL",
+    "apihelp-manxcitation-example-1": "Fetch citation from Manx Documentation Database URL"
+}

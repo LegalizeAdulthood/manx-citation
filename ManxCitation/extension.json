@@ -1,0 +1,58 @@
+{
+    "name": "ManxCitation",
+    "version": "1.0.0",
+    "author": [
+        "Richard Thomson"
+    ],
+    "url": "https://github.com/LegalizeAdulthood/manx-citation",
+    "descriptionmsg": "manxcitation-desc",
+    "license-name": "MIT",
+    "type": "other",
+    "requires": {
+        "MediaWiki": ">= 1.31.0"
+    },
+    "APIModules": {
+        "manxcitation": "ApiManxCitation"
+    },
+    "ResourceModules": {
+        "ext.manxCitation.toolbar": {
+            "scripts": [
+                "modules/ext.manxCitation.toolbar.js"
+            ],
+            "styles": [
+                "modules/ext.manxCitation.toolbar.css"
+            ],
+            "dependencies": [
+                "jquery.wikiEditor",
+                "jquery.textSelection",
+                "mediawiki.api",
+                "mediawiki.util"
+            ],
+            "messages": [
+                "manxcitation-button-label",
+                "manxcitation-button-tooltip",
+                "manxcitation-prompt",
+                "manxcitation-success",
+                "manxcitation-error-invalid-url",
+                "manxcitation-error-fetch"
+            ]
+        }
+    },
+    "ResourceFileModulePaths": {
+        "localBasePath": "",
+        "remoteExtPath": "ManxCitation"
+    },
+    "MessagesDirs": {
+        "ManxCitation": [
+            "i18n"
+        ]
+    },
+    "AutoloadClasses": {
+        "ApiManxCitation": "includes/ApiManxCitation.php",
+        "ManxCitationHooks": "includes/ManxCitationHooks.php"
+    },
+    "Hooks": {
+        "BeforePageDisplay": "ManxCitationHooks::onBeforePageDisplay"
+    },
+    "manifest_version": 2
+}

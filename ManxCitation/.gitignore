@@ -1,0 +1,23 @@
+# Ignore dependencies
+/vendor/
+/node_modules/
+
+# Ignore test coverage
+/coverage/
+
+# Ignore build artifacts
+*.log
+*.cache
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore composer lock (extension should work with ranges)
+composer.lock
+package-lock.json

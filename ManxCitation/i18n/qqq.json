@@ -1,0 +1,12 @@
+{
+    "manxcitation-desc": "{{desc|name=ManxCitation|url=https://github.com/LegalizeAdulthood/manx-citation}}",
+    "manxcitation-button-label": "Label for the toolbar button",
+    "manxcitation-button-tooltip": "Tooltip text for the toolbar button",
+    "manxcitation-prompt": "Prompt text asking user for URL",
+    "manxcitation-success": "Success notification message",
+    "manxcitation-error-invalid-url": "Error message when URL format is invalid",
+    "manxcitation-error-fetch": "Error message when fetching fails",
+    "manxcitation-invalid-url": "API error message for invalid URL",
+    "manxcitation-fetch-error": "API error message when fetch fails",
+    "apihelp-manxcitation-example-1": "Example description for API help"
+}
