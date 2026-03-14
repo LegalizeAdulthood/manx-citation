@@ -64,8 +64,6 @@ jobs:
         run: |
           mkdir -p mediawiki-1.31.0/extensions/ManxCitation
           rsync -av --exclude=mediawiki-1.31.0 --exclude=.git --exclude=node_modules --exclude=vendor . mediawiki-1.31.0/extensions/ManxCitation/
-          cd mediawiki-1.31.0
-          grep "'wgVersion'" includes/DefaultSettings.php
       
       - name: Install Composer dependencies for MediaWiki
         run: |
