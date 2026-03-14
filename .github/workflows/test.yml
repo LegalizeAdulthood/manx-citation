@@ -44,7 +44,7 @@ jobs:
           php-version: ${{ matrix.php }}
           extensions: mbstring, intl, mysql
           coverage: ${{ matrix.coverage && 'xdebug' || 'none' }}
-          tools: composer:v1
+          tools: composer
       
       - name: Cache MediaWiki
         id: cache-mediawiki
@@ -68,7 +68,7 @@ jobs:
       - name: Install Composer dependencies for MediaWiki
         run: |
           cd mediawiki-1.31.0
-          composer install --no-dev --no-progress --no-suggest
+          composer install --no-dev --no-progress --no-suggest --no-plugins --no-scripts
       
       - name: Install MediaWiki
         run: |
