@@ -68,7 +68,8 @@ jobs:
       - name: Install Composer dependencies for MediaWiki
         run: |
           cd mediawiki-1.31.0
-          composer install --no-dev --no-progress --no-suggest --no-plugins --no-scripts
+          composer config audit.block-insecure false
+          composer install --no-dev --no-progress --no-suggest --no-plugins --no-scripts --ignore-platform-reqs
       
       - name: Install MediaWiki
         run: |
