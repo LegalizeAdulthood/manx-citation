@@ -44,7 +44,7 @@ jobs:
           php-version: ${{ matrix.php }}
           extensions: mbstring, intl, mysql
           coverage: ${{ matrix.coverage && 'xdebug' || 'none' }}
-          tools: composer
+          tools: composer:v1
       
       - name: Cache MediaWiki
         id: cache-mediawiki
