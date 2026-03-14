@@ -11,7 +11,7 @@ on:
 jobs:
   test:
     name: PHP ${{ matrix.php }} - MW 1.31
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     
     strategy:
       matrix:
@@ -129,7 +129,7 @@ jobs:
 
   integration-test:
     name: Integration Test - MW 1.31.0
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     
     steps:
       - name: Checkout extension
