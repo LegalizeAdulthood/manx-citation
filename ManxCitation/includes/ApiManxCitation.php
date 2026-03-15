@@ -103,6 +103,9 @@ class ApiManxCitation extends ApiBase {
         return $dateString;
     }
 
+    /**
+     * @inheritDoc
+     */
     public function getAllowedParams() {
         return [
             'url' => [
@@ -120,6 +123,9 @@ class ApiManxCitation extends ApiBase {
         return false;
     }
 
+    /**
+     * @inheritDoc
+     */
     protected function getExamplesMessages() {
         return [
             'action=manxcitation&url=https://manx-docs.org/details.php/12345,67890'
