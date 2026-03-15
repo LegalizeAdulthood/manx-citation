@@ -2,7 +2,10 @@
 <ruleset name="ManxCitation">
 	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
 		<exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed"/>
-	</rule>
+		<exclude name="MediaWiki.WhiteSpace.SpaceyParenthesis.SingleSpaceAfterOpenParenthesis"/>
+		<exclude name="MediaWiki.WhiteSpace.SpaceyParenthesis.SingleSpaceBeforeCloseParenthesis"/>
+        <exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingAfterOpen"/>
+    </rule>
 	<file>includes/</file>
 	<file>tests/</file>
 	<arg name="extensions" value="php"/>
