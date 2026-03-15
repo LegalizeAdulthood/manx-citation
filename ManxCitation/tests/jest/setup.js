@@ -15,13 +15,13 @@ global.mw = {
         };
         return messages[key] || key;
     }),
-    
+
     notify: jest.fn(),
-    
+
     Api: jest.fn().mockImplementation(() => ({
         get: jest.fn()
     })),
-    
+
     loader: {
         using: jest.fn((modules, callback) => {
             if (typeof callback === 'function') {
@@ -31,7 +31,7 @@ global.mw = {
         }),
         getState: jest.fn(() => 'ready')
     },
-    
+
     config: {
         get: jest.fn((key) => {
             const config = {
@@ -41,7 +41,7 @@ global.mw = {
             return config[key];
         })
     },
-    
+
     util: {
         addPortletLink: jest.fn()
     }
