@@ -118,7 +118,7 @@ jobs:
         run: |
           cd ManxCitation
           composer config audit.block-insecure false || true
-          composer install --no-progress --ignore-platform-reqs
+          composer install --no-progress
           composer test
       
       - name: Run JavaScript tests
