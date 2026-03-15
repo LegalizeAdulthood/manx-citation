@@ -5,10 +5,10 @@
  * PHPUnit bootstrap for ManxCitation extension
  */
 
-if ( getenv( 'MW_INSTALL_PATH' ) !== false ) {
-    $IP = getenv( 'MW_INSTALL_PATH' );
+if (getenv('MW_INSTALL_PATH') !== false) {
+    $IP = getenv('MW_INSTALL_PATH');
 } else {
-    $IP = dirname( __DIR__, 3 );
+    $IP = dirname(__DIR__, 3);
 }
 
 require_once "$IP/tests/common/TestsAutoLoader.php";
