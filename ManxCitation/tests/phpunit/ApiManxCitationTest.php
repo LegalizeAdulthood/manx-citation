@@ -3,6 +3,7 @@
 
 namespace ManxCitation\Tests;
 
+use ApiBase;
 use ApiManxCitation;
 use ApiMain;
 use ApiTestCase;
@@ -13,6 +14,7 @@ use ReflectionMethod;
  * @group API
  * @group Database
  * @group ManxCitation
+ * @group medium
  * @covers ApiManxCitation
  */
 class ApiManxCitationTest extends ApiTestCase {
@@ -228,6 +230,6 @@ HTML;
         $params = $api->getAllowedParams();
         
         $this->assertArrayHasKey('url', $params);
-        $this->assertTrue($params['url']['required'] ?? false);
+        $this->assertTrue($params['url'][ApiBase::PARAM_REQUIRED] ?? false);
     }
 }
