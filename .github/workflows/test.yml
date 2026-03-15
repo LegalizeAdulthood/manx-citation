@@ -115,6 +115,7 @@ jobs:
       
       - name: Run code style checks
         run: |
+          cd ManxCitation
           composer install
           composer test
       
