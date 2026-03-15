@@ -114,6 +114,7 @@ jobs:
             extensions/ManxCitation/tests/phpunit/
       
       - name: Run code style checks
+        if: matrix.php == '7.4'
         run: |
           cd ManxCitation
           composer config audit.block-insecure false || true
