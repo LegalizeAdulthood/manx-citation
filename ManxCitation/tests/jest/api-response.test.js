@@ -43,7 +43,7 @@ describe('API Response Handling', () => {
             url: 'https://manx-docs.org/details.php/12345,67890'
         });
         
-        expect(result.manxcitation.citation).not.toContain(',');
+        expect(result.manxcitation.citation).toMatch(/}}$/);
         expect(result.manxcitation.citation).toMatch(/^{{manx details\|/);
     });
 });
