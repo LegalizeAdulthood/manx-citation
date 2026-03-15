@@ -123,6 +123,7 @@ jobs:
       
       - name: Run JavaScript tests
         run: |
+          cd ManxCitation
           npm install
           npm test
       
