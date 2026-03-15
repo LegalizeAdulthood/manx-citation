@@ -4,9 +4,9 @@ name: Test ManxCitation Extension
 
 on:
   push:
-    branches: [ wiki-extension ]
+    branches: [ master, develop ]
   pull_request:
-    branches: [ wiki-extension ]
+    branches: [ master ]
 
 jobs:
   test:
