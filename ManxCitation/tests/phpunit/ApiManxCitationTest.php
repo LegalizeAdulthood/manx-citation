@@ -48,11 +48,11 @@ HTML;
         
         $result = $method->invoke($api, $html, '12345,67890');
         
-        $this->assertStringContainsString(
+        $this->assertContains(
             '{{manx details|12345,67890|Intel 8080 Microprocessor Manual}}',
             $result
         );
-        $this->assertStringContainsString('June, 1975', $result);
+        $this->assertContains('June, 1975', $result);
     }
     
     /**
@@ -100,7 +100,7 @@ HTML;
         
         $result = $method->invoke($api, $html, '11111,22222');
         
-        $this->assertStringContainsString('{{manx details|11111,22222|', $result);
+        $this->assertContains('{{manx details|11111,22222|', $result);
     }
     
     /**
