@@ -63,7 +63,7 @@ jobs:
       - name: Move extension to MediaWiki extensions directory
         run: |
           mkdir -p mediawiki-1.31.0/extensions/ManxCitation
-          rsync -av --exclude=mediawiki-1.31.0 --exclude=.git --exclude=node_modules --exclude=vendor . mediawiki-1.31.0/extensions/ManxCitation/
+          rsync -av --exclude=node_modules --exclude=vendor ManxCitation/ mediawiki-1.31.0/extensions/ManxCitation/
       
       - name: Install Composer dependencies for MediaWiki
         run: |
