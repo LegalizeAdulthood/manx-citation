@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <ruleset name="ManxCitation">
-	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki"/>
+	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
+		<exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed"/>
+	</rule>
 	<file>includes/</file>
 	<file>tests/</file>
 	<arg name="extensions" value="php"/>
