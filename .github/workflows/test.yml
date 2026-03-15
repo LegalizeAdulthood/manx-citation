@@ -134,6 +134,10 @@ jobs:
           files: ./mediawiki-1.31.0/coverage.xml
           flags: php
 
+      - name: Clean up cached directory
+        if: always()
+        run: rm -f mediawiki-1.31.0/LocalSettings.php
+
   integration-test:
     name: Integration Test - MW 1.31.0
     runs-on: ubuntu-latest
