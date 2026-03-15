@@ -163,7 +163,8 @@ jobs:
           mkdir -p mediawiki-1.31.0/extensions/ManxCitation
           rsync -av --exclude=node_modules --exclude=vendor ManxCitation/ mediawiki-1.31.0/extensions/ManxCitation/
           cd mediawiki-1.31.0
-          composer install --no-dev --no-plugins --no-scripts
+          composer config audit.block-insecure false || true
+          composer install --no-dev --no-plugins --no-scripts --ignore-platform-req=composer-plugin-api
           if [ -d vendor/jetbrains/phpstorm-stubs ] && [ ! -f vendor/jetbrains/phpstorm-stubs/PhpStormStubsMap.php ]; then
             echo '<?php' > vendor/jetbrains/phpstorm-stubs/PhpStormStubsMap.php
           fi
