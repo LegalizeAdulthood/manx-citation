@@ -69,7 +69,7 @@ jobs:
         run: |
           cd mediawiki-1.31.0
           composer config audit.block-insecure false || true
-          composer install --no-progress --no-suggest --no-plugins --no-scripts --ignore-platform-reqs
+          composer install --no-progress --no-suggest --no-plugins --no-scripts --ignore-platform-req=composer-plugin-api
           if [ -d vendor/jetbrains/phpstorm-stubs ] && [ ! -f vendor/jetbrains/phpstorm-stubs/PhpStormStubsMap.php ]; then
             echo '<?php' > vendor/jetbrains/phpstorm-stubs/PhpStormStubsMap.php
           fi
